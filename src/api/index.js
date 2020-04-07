@@ -2,6 +2,8 @@ import fetch from '@/utils/request'
 import qs from 'qs'
 import url from '../api/baseUrl'
 
+
+//通用变量
 let batchId = 'creamFieldXIAMEN';
 
 const Api = {
