@@ -8,12 +8,14 @@
       @click-left="onClickLeft"
       @click-right="onClickRight"
     />
+
     <div class="section">
       <div class="content">
         //
 
       </div>
     </div>
+
     <van-tabbar v-model="active" :fixed="false" safe-area-inset-bottom>
       <van-tabbar-item icon="home-o">标签</van-tabbar-item>
       <van-tabbar-item icon="search">标签</van-tabbar-item>
@@ -48,6 +50,12 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
+  .nav{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .section{
     flex: 1;
