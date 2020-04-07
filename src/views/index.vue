@@ -1,5 +1,5 @@
 <template>
-  <div class='index'>
+  <div class="index">
     <van-nav-bar
       title="标题"
       left-text="返回"
@@ -8,30 +8,53 @@
       @click-left="onClickLeft"
       @click-right="onClickRight"
     />
+    <div class="section">
+      <div class="content">
+        //
+
+      </div>
+    </div>
+    <van-tabbar v-model="active" :fixed="false" safe-area-inset-bottom>
+      <van-tabbar-item icon="home-o">标签</van-tabbar-item>
+      <van-tabbar-item icon="search">标签</van-tabbar-item>
+      <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
+      <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
 
 <script scoped>
 export default {
-  name:'index',
+  name: "index",
+  data () {
+    return {
+        active: 0
+    }
+  },
 
-  methods:{
-    onClickLeft(){
+  methods: {
+    onClickLeft() {
       //
     },
-    onClickRight(){
+    onClickRight() {
       //
     }
   }
-}
+};
 </script>
 
-
 <style lang="scss" scoped>
-  .index{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+.index {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
+  .section{
+    flex: 1;
+    overflow: auto;
+    .content{
+      height: 100px;
+    }
+  }
+}
 </style>
